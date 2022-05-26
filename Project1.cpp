@@ -26,16 +26,13 @@ int main()
     cout << "\n\nПожалуйста,введите ваше имя: ";
     string name;
     cin >> name;
-    int bet, num, difficult, dice;//Рандомное число
+    int bet, num, dice;//Рандомное число
     unsigned long long int balance;
     char choice;
     cout << "\n\nВведите баланс: $";
     cin >> balance;
     do
     {
-        system("cls");
-        cout << "Введите сложность\n";
-        cin >> difficult;
         system("cls");
         rules();
         cout << "\n\n Ваш баланс: $ " << balance << "\n"; //Назначает баланс игрок
@@ -49,11 +46,11 @@ int main()
             } while (bet > balance);
             do
             {
-                cout << "Введите число от 1 до 5 :";
+                cout << "Введите число от 1 до 10 :";
                 cin >> num;
-                if (num <= 0 || num > 5)
-                    cout << "\nЧисло должно быть от 1 до 5!Пожалуйста,повторите попытку!\n";
-            } while (num <= 0 || num > 5);
+                if (num <= 0 || num > 10)
+                    cout << "\nЧисло должно быть от 1 до 10!Пожалуйста,повторите попытку!\n";
+            } while (num <= 0 || num > 10);
             dice = rand() % 10 + 1;
             if (dice == num)
             {
